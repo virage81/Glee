@@ -1,4 +1,6 @@
 $header-color: #436372;
+$footer-color: #7b7b7b;
+$accent-color: #a3bbc8;
 $default-color: #243f4d;
 $title-color: #191919;
 
@@ -25,4 +27,12 @@ $title-color: #191919;
 %Rubik-400 {
 	font-family: 'Rubik-Regular';
 	font-weight: 400;
+}
+
+%button {
+	color: #fff;
+	background-color: $accent-color;
+	font-size: 15px;
+	line-height: 12px;
+	@extend %Rubik-500;
 }

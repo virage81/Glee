@@ -1,12 +1,30 @@
+html,
+body {
+	min-height: 100vh;
+}
+
 body {
 	background-color: #fff;
 
 	font-size: 16px;
 	color: $default-color;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.wide-container {
+	max-width: 1800;
+	padding: 0 15px;
+	margin: 0 auto;
 }
 
 .container {
-	max-width: 1800;
+	max-width: 1230px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
