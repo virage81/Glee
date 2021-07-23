@@ -32,7 +32,7 @@ function styles() {
 }
 
 function scripts() {
-	return src(['node_modules/jquery/dist/jquery.js', 'app/js/main.js'])
+	return src(['node_modules/jquery/dist/jquery.js', 'node_modules/slick-carousel/slick/slick.js','app/js/main.js'])
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.pipe(dest('app/js'))
@@ -51,7 +51,7 @@ function images() {
 				}),
 			])
 		)
-		.pipe(dest('dist/images'));
+		.pipe(dest('dist/img'));
 }
 
 function build() {

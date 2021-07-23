@@ -1,3 +1,9 @@
 $(function () {
-	
+	$('.top-slider__inner').slick({
+		dots:true,
+		fade: true,
+		autoplay: 3000,
+		slidesToShow: 1,
+		arrows: false
+	});
 });
