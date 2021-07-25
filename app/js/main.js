@@ -7,5 +7,5 @@ $(function () {
 		arrows: false
 	});
 
-	var mixer = mixitup('.title-mix__list');
+	var mixer = mixitup('.products__inner');
 });
