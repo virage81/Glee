@@ -11,6 +11,8 @@ body {
 
 	display: flex;
 	flex-direction: column;
+
+	@extend %DMSans-400;
 }
 
 .main {
@@ -27,4 +29,42 @@ body {
 	max-width: 1230px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.title {
+	text-align: center;
+	margin: 0 auto;
+	@extend %DMSans-700;
+	font-size: 36px;
+	color: $title-color;
+
+	margin-bottom: 25px;
+}
+
+.title-mix__list {
+	display: flex;
+	justify-content: center;
+
+	&-item {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	&-item + &-item {
+		margin-left: 30px;
+	}
+
+	&-link {
+		text-align: center;
+		@extend %DMSans-700;
+		color: #8b8b8b;
+		font-size: 16px;
+
+		transition: all .2s linear;
+	}
+	&-link:hover,
+	.mixitup-control-active {
+		color: $title-color;
+	}
 }

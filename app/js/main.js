@@ -6,4 +6,6 @@ $(function () {
 		slidesToShow: 1,
 		arrows: false
 	});
+
+	
 });

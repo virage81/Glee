@@ -1,0 +1,36 @@
+.design {
+	padding: 100px 0 120px;
+
+	&__inner {
+		padding-top: 80px;
+
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 30px;
+		row-gap: 40px;
+	}
+
+	&__item {
+		background: #f8f8f8 85% no-repeat;
+
+		width: 370px;
+		height: 240px;
+
+		padding: 35px 0 0 35px;
+
+		&-title {
+			@extend %DMSans-700;
+			font-size: 20px;
+			color: $title-color;
+
+			margin-bottom: 15px;
+			
+			max-width: 190px;
+		}
+
+		&-type {
+			@extend %DMSans-700;
+			color: $accent-color;
+		}
+	}
+}
