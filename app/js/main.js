@@ -1,32 +1,27 @@
 $(function () {
+	/*
+============= Slick-Slider ==================
+	*/
 	$('.top-slider__inner').slick({
-		dots:true,
+		dots: true,
 		fade: true,
 		autoplay: 3000,
 		slidesToShow: 1,
-		arrows: false
+		arrows: false,
 	});
 
-	// var mixer = mixitup('.design__inner');
-	// var mixer = mixitup('.products__inner');
+	/*
+============= MixitUp ==================
+	*/
+	var products = document.querySelector('[data-ref="products"]');
+	var design = document.querySelector('[data-ref="design"]');
 
-	// var container1 = document.querySelector('[data-ref="products]');
-	// var container2 = document.querySelector('[data-ref="design]');
+	var config = {
+		controls: {
+			scope: 'local',
+		},
+	};
 
-	// var mixer1 = mixitup(container1);
-	// var mixer2 = mixitup(container2);
-
-	$('.design__inner').mixitup({
-		selectors: {
-			filter: '.design__filter'
-		}
-	});
-
-	$('.products__inner').mixitup({
-		selectors: {
-			filter: '.products__filter'
-		}
-	});
-
-	// var mixer1 = mixitup("$('[data-ref="products"]')")
+	var mixer_products = mixitup(products, config);
+	var mixer_design = mixitup(design, config);
 });
