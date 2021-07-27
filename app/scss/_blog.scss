@@ -58,6 +58,8 @@
 	&__inner {
 		display: flex;
 		justify-content: space-between;
+
+		margin-bottom: 15px;
 	}
 
 	&__item {
@@ -130,9 +132,12 @@
 }
 
 .partners {
-	height: 265px;
+	background-color: #fef7f0;
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 250px;
+	}
 }

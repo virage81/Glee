@@ -1,0 +1,50 @@
+.terms {
+	padding-top: 115px;
+
+	&__item {
+		width: 100%;
+
+		&-title {
+			@extend %Rubik-500;
+			font-size: 24px;
+			color: $default-color;
+
+			margin-bottom: 35px;
+		}
+	}
+
+	&__item + &__item {
+		margin-top: 75px;
+	}
+
+	&__list {
+		list-style-type: none;
+		counter-reset: num;
+		&-item {
+			padding-left: 35px;
+			position: relative;
+
+			&__text {
+				@extend %Rubik-400;
+				line-height: 30px;
+			}
+
+			&::before {
+				content: '0' counter(num) '.';
+				counter-increment: num;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				@extend %Rubik-400;
+				line-height: 30px;
+				color: $default-color;
+			}
+		}
+
+		&-item + &-item {
+			margin-top: 30px;
+		}
+	}
+}

@@ -28,6 +28,12 @@ $title-color: #191919;
 	font-family: 'Rubik-Regular';
 	font-weight: 400;
 }
+
+%Rubik-300 {
+	font-family: 'Rubik-Light';
+	font-weight: 300;
+}
+
 %Poppins-700 {
 	font-family: 'Poppins-Bold';
 	font-weight: 700;
@@ -36,7 +42,12 @@ $title-color: #191919;
 %button {
 	color: #fff;
 	background-color: $accent-color;
+
 	font-size: 15px;
 	line-height: 12px;
 	@extend %Rubik-500;
+
+	border: none;
+
+	cursor: pointer;
 }
