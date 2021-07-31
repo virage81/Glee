@@ -151,11 +151,11 @@
 					font-size: 40px;
 					color: #333;
 
-					margin-bottom: 25px;
+					margin-bottom: 10px;
 				}
 
 				&__star {
-					margin-bottom: 40px;
+					margin-bottom: 20px;
 
 					display: block;
 				}
@@ -169,7 +169,7 @@
 					font-size: 30px;
 					color: #333;
 
-					margin-bottom: 40px;
+					margin-bottom: 25px;
 				}
 
 				&__text {
@@ -181,11 +181,90 @@
 					display: block;
 				}
 
+				&-links {
+					display: flex;
+				}
+
 				&__link {
 					width: 50px;
 					height: 50px;
 
 					background-color: #fff;
+					box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					transition: all 0.2s linear;
+
+					path {
+						fill: $accent-color;
+
+						transition: all 0.2s linear;
+					}
+
+
+					&--cart {
+						position: relative;
+
+						background-color: $accent-color;
+						path {
+							fill: #fff;
+						}
+
+						&::before {
+							content: 'ADD TO CART';
+							text-transform: uppercase;
+							text-align: center;
+
+							color: transparent;
+
+							@extend %Rubik-400;
+							font-size: 15px;
+
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							z-index: 3;
+
+							display: flex;
+							justify-content: center;
+							align-items: center;
+
+							width: 0;
+							height: 50px;
+
+							white-space: nowrap;
+
+							transition: all 0.2s linear;
+
+							border-radius: 5px;
+
+							background-color: $accent-color;
+						}
+
+						&:hover {
+							border-radius: 5px;
+							&::before {
+								width: 210px;
+								color: #fff;
+							}
+						}
+					}
+
+					&:hover {
+						background-color: $accent-color;
+						path {
+							fill: #fff;
+						}
+					}
+				}
+
+				&__link + .products__item-info__link {
+					margin-left: 10px;
 				}
 			}
 
@@ -202,5 +281,4 @@
 			margin-bottom: 40px;
 		}
 	}
-
 }

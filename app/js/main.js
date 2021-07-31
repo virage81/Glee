@@ -28,6 +28,7 @@ $(function () {
 		normalFill: '#d6d6d6',
 		ratedFill: '#ffcc00',
 		readOnly: true,
+		spacing: "12px",
 	});
 
 	$('.recent-product__item-star').rateYo({
