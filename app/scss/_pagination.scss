@@ -1,0 +1,47 @@
+.pagination {
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		background-color: transparent;  
+		border: 1px solid $accent-color;
+
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		cursor: pointer;
+		transition: all .2s linear;
+
+		&:hover {
+			background-color: $accent-color;  
+
+			.pagination__link {
+				color: #fff;
+			}
+		}
+	}
+
+	&__link {
+		@extend %Rubik-400;
+		font-size: 16px;
+		line-height: 48px;
+		text-align: center;
+
+		color: $default-color;
+
+		width: 100%;
+
+		padding: 0 21px; 
+		
+
+		transition: all .2s linear;
+	}
+
+	&__item + &__item {
+		margin-left: 15px;
+	}
+}
