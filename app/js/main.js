@@ -1,5 +1,10 @@
 $(function () {
 	/*
+============= Form Styler ==================
+	*/
+	$('.product-one__info-input').styler({});
+
+	/*
 ============= Ion-rangeSlider ==================
 	*/
 	$('.filter-price__input').ionRangeSlider({
@@ -19,20 +24,24 @@ $(function () {
 	/*
 ============= Ion-rangeSlider ==================
 	*/
-	// $('.recent-product__item-star').rateYo({
-	// 
-	// });
 
 	$('.products__item-info__star').rateYo({
 		starWidth: '18px',
 		normalFill: '#d6d6d6',
 		ratedFill: '#ffcc00',
 		readOnly: true,
-		spacing: "12px",
+		spacing: '12px',
 	});
 
 	$('.recent-product__item-star').rateYo({
 		starWidth: '11px',
+		normalFill: '#d6d6d6',
+		ratedFill: '#ffcc00',
+		readOnly: true,
+	});
+
+	$('.product-one__info-star').rateYo({
+		starWidth: '18px',
 		normalFill: '#d6d6d6',
 		ratedFill: '#ffcc00',
 		readOnly: true,
@@ -47,6 +56,22 @@ $(function () {
 		autoplay: 3000,
 		slidesToShow: 1,
 		arrows: false,
+	});
+
+	$('.product-one__slider-thumb').slick({
+		asNavFor: '.product-one__slider-big',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: false,
+		vertical: true,
+		focusOnSelect: true,
+		draggable: false,
+	});
+
+	$('.product-one__slider-big').slick({
+		slidesToShow: 1,
+		arrows: false,
+		fade: true,
 	});
 
 	/*
