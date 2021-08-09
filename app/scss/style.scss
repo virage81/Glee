@@ -2115,27 +2115,55 @@
 		}
 
 		&-input {
-			width: 400px;
-			height: 50px;
-
 			margin-bottom: 20px;
-			padding: 15px 20px;
 
-			border: 1px solid #e5e5e5;
+			display: inline-block;
 
-			outline: 1px solid transparent;
-			transition: all 0.2s linear;
+			position: relative;
 
-			@extend %Rubik-400;
-			color: #333;
+			input {
+				width: 400px;
+				height: 50px;
+				padding: 15px 40px 15px 20px;
 
-			&::placeholder {
-				color: #999;
+				border: 1px solid #e5e5e5;
+				outline: 1px solid transparent;
+
+				transition: all 0.2s linear;
+
 				@extend %Rubik-400;
+				color: #333;
+
+				&::placeholder {
+					color: #999;
+					@extend %Rubik-400;
+				}
+
+				&:focus {
+					outline-color: $accent-color;
+				}
 			}
 
-			&:focus {
-				outline-color: $accent-color;
+			&::after {
+				content: '';
+
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 18px;
+				z-index: 3;
+
+				width: 13px;
+				height: 13px;
+			}
+
+			&--user::after {
+				background: url(../img/user-blue.svg) center no-repeat;
+			}
+
+			&--mail::after {
+				width: 18px;
+				background: url(../img/mail.svg) center no-repeat;
 			}
 		}
 
@@ -2145,31 +2173,48 @@
 
 		&-textarea {
 			display: block;
-
-			width: 100%;
-			height: 120px;
-
-			border: 1px solid #e5e5e5;
-
-			padding: 15px 20px;
 			margin-bottom: 40px;
 
-			resize: none;
+			position: relative;
 
-			outline: 1px solid transparent;
-			transition: all 0.2s linear;
+			&::after {
+				content: '';
 
-			@extend %Rubik-400;
+				position: absolute;
+				top: 18px;
+				right: 18px;
 
-			&::placeholder {
-				color: #999;
-				@extend %Rubik-400;
+				width: 18px;
+				height: 15px;
+
+				background: url(../img/message.svg) center no-repeat;
 			}
 
-			&:focus {
-				outline-color: $accent-color;
+			textarea {
+				padding: 15px 40px 15px 20px;
 
-				color: #333;
+				resize: none;
+
+				outline: 1px solid transparent;
+				transition: all 0.2s linear;
+
+				@extend %Rubik-400;
+
+				width: 100%;
+				height: 120px;
+
+				border: 1px solid #e5e5e5;
+
+				&::placeholder {
+					color: #999;
+					@extend %Rubik-400;
+				}
+
+				&:focus {
+					outline-color: $accent-color;
+
+					color: #333;
+				}
 			}
 		}
 
@@ -2178,6 +2223,159 @@
 
 			padding: 17px 33px;
 		}
+	}
+}
+
+.contact {
+	padding-top: 120px;
+
+	&__suptitle {
+		@extend %Poppins-700;
+		color: $accent-color;
+		text-align: center;
+	}
+
+	&__title {
+		@extend %DMSans-700;
+		font-size: 35px;
+		text-align: center;
+		color: $header-color;
+
+		margin-bottom: 70px;
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+
+		margin-bottom: 115px;
+	}
+
+	&__item {
+		width: 370px;
+		height: 385px;
+
+		padding: 70px 50px 75px;
+
+		background-color: #fbfbfb;
+
+		text-align: center;
+
+		border: 2px solid transparent;
+
+		transition: all 0.2s linear;
+
+		&:hover {
+			border-color: $accent-color;
+
+			.contact__item-imgBox {
+				background-color: $accent-color;
+
+				path {
+					fill: #fff;
+				}
+			}
+		}
+
+		&-imgBox {
+			box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+			border-radius: 20px;
+
+			background-color: #fff;
+
+			width: 80px;
+			height: 80px;
+
+			margin: 0 auto 60px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			transition: all 0.2s linear;
+
+			path {
+				fill: $accent-color;
+
+				transition: all 0.2s linear;
+			}
+		}
+
+		&-title {
+			color: #222;
+			@extend %DMSans-700;
+			font-size: 20px;
+
+			margin-bottom: 20px;
+		}
+
+		&-info {
+			@extend %Rubik-400;
+			color: #565872;
+
+			a {
+				@extend %Rubik-400;
+				color: #565872;
+
+				margin-bottom: 15px;
+				display: inline-block;
+			}
+
+			div {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__form {
+		margin-right: 50px;
+
+		&-input {
+			width: 300px;
+
+			input {
+				width: 300px;
+
+
+				background-color: #fafafa;
+				border: none;
+
+				&::placeholder {
+					text-transform: uppercase;
+					color: #565872;
+				}
+			}
+		}
+
+		&-input + &-input {
+			margin-left: 15px;
+		}
+
+		&-textarea {
+			textarea {
+				background-color: #fafafa;
+				border: none;
+
+				&::placeholder {
+					text-transform: uppercase;
+					color: #565872;
+				}
+			}
+		}
+
+		&-btn {
+			border-radius: 5px;
+		}
+	}
+
+	#map {
+		width: 500px;
+		height: 335px;
 	}
 }
 
