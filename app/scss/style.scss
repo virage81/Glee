@@ -2341,7 +2341,6 @@
 			input {
 				width: 300px;
 
-
 				background-color: #fafafa;
 				border: none;
 
@@ -2376,6 +2375,298 @@
 	#map {
 		width: 500px;
 		height: 335px;
+	}
+}
+
+.about {
+	padding: 120px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__img {
+		width: 570px;
+		height: 100%;
+
+		object-fit: cover;
+	}
+
+	&__content {
+		width: 560px;
+
+		&-suptitle {
+			display: flex;
+			align-items: flex-end;
+
+			margin-bottom: 30px;
+
+			span {
+				@extend %Rubik-700;
+				font-size: 140px;
+				line-height: 100px;
+				color: $accent-color;
+
+				margin-right: 20px;
+			}
+
+			&__list {
+				width: 100px;
+
+				li {
+					@extend %Rubik-400;
+				}
+
+				li + li {
+					margin-top: 7px;
+				}
+			}
+		}
+
+		&-title {
+			@extend %DMSans-700;
+			font-size: 36px;
+
+			margin-bottom: 25px;
+		}
+
+		&-text {
+			@extend %Rubik-400;
+			line-height: 30px;
+
+			margin-bottom: 65px;
+		}
+
+		&-box {
+			border-top: 2px solid #e6eaf0;
+			padding-top: 30px;
+
+			&__list {
+				display: flex;
+				justify-content: space-between;
+
+				&-item {
+					padding: 10px 0 10px 85px;
+
+					position: relative;
+
+					&::before {
+						content: '';
+
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: 20px;
+
+						width: 43px;
+						height: 40px;
+					}
+
+					&:nth-child(1)::before {
+						width: 36px;
+						height: 37px;
+
+						background: url(../img/about/note.svg);
+					}
+					&:nth-child(2)::before {
+						background: url(../img/about/voice.svg);
+					}
+					&:nth-child(3)::before {
+						width: 42px;
+
+						background: url(../img/about/medal.svg);
+					}
+
+					&__title {
+						@extend %DMSans-700;
+						font-size: 36px;
+					}
+
+					&__subtitle {
+						@extend %DMSans-700;
+						color: #4c4c4c;
+						margin-left: 5px;
+					}
+				}
+
+				&-item + &-item {
+					border-left: 1px solid #e6eaf0;
+				}
+			}
+		}
+	}
+}
+
+.about-features {
+	background-color: #fcd7b6;
+
+	padding: 78px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__item {
+		max-width: 270px;
+		text-align: center;
+
+		&-img {
+			margin: 0 auto 20px;
+
+			height: 70px;
+			width: 70px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&-title {
+			@extend %DMSans-700;
+			font-size: 36px;
+
+			margin-bottom: 5px;
+		}
+
+		&-subtitle {
+			@extend %DMSans-700;
+			font-size: 18px;
+		}
+	}
+}
+
+.about-team {
+	padding-top: 120px;
+
+	&__inner {
+		display: flex;
+	}
+
+	&__info {
+		width: 300px;
+
+		margin-right: 100px;
+
+		&-title {
+			@extend %DMSans-700;
+			font-size: 36px;
+
+			margin-bottom: 20px;
+		}
+
+		&-text {
+			@extend %Rubik-400;
+			line-height: 30px;
+
+			margin-bottom: 35px;
+		}
+
+		&-link {
+			@extend %button;
+
+			border-radius: 5px;
+
+			padding: 15px;
+
+			img {
+				display: inline-block;
+				margin-left: 15px;
+			}
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		grid-gap: 40px 30px;
+
+		&-item {
+			position: relative;
+
+			width: 370px;
+			height: 380px;
+
+			&__img {
+				width: 370px;
+				height: 320px;
+
+				object-fit: cover;
+			}
+
+			&__info {
+				position: absolute;
+				box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+
+				bottom: 0px;
+				left: 0;
+
+				width: 320px;
+				height: 110px;
+
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				background-color: #fff;
+
+				&-box {
+					padding-left: 20px;
+
+					&__title {
+						@extend %DMSans-700;
+						font-size: 22px;
+						color: $header-color;
+
+						margin-bottom: 5px;
+					}
+
+					&__subtitle {
+						@extend %Rubik-400;
+						color: #565872;
+					}
+				}
+
+				&-share {
+					padding-right: 20px;
+
+					&__item {
+						border-radius: 50%;
+
+						width: 40px;
+						height: 40px;
+
+						background-color: #f6f6f6;
+
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+
+						margin-left: 5px;
+
+						transition: all 0.2s linear;
+
+						path {
+							fill: #929292;
+
+							transition: all 0.2s linear;
+						}
+
+						&:hover {
+							background-color: #f6f6f6;
+
+							path {
+								fill: darken($accent-color, 30%);
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
