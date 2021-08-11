@@ -1,0 +1,16 @@
+@import 'vars';
+@import 'fonts';
+@import 'normalize';
+@import 'libs';
+@import 'glob';
+
+@import '../module/header/header';
+
+@import '../module/product-page/product-page';
+@import '../module/products/products';
+@import '../module/related/related';
+@import '../module/blog/blog';
+@import '../module/partners/partners';
+
+
+@import '../module/footer/footer';

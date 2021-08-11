@@ -1,0 +1,93 @@
+.top-slider {
+	background: url(../img/slider/bg.png) center no-repeat;
+	background-size: cover;
+
+	&__item {
+		display: flex !important;
+		justify-content: space-between;
+		position: relative;
+		padding: 215px 0 280px;
+	}
+
+	&__content {
+		@extend %Rubik-400;
+
+		color: $default-color;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		font-size: 72px;
+		line-height: 70px;
+		max-width: 470px;
+	}
+
+	&__text {
+		max-width: 370px;
+		font-size: 18px;
+		line-height: 30px;
+		color: $header-color;
+
+		margin-bottom: 45px;
+	}
+
+	&__btn {
+		padding: 21px;
+
+		@extend %Rubik-500;
+		font-size: 15px;
+		line-height: 12px;
+
+		@extend %button;
+
+		display: inline-block;
+
+		svg {
+			margin-left: 60px;
+		}
+	}
+
+	&__img {
+		object-fit: contain;
+	}
+
+	.slick-dots {
+		position: absolute;
+		bottom: 45px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		li + li {
+			margin-left: 10px;
+		}
+
+		li {
+			button {
+				@extend %Rubik-500;
+				font-size: 11px;
+				line-height: 9px;
+				color: $default-color;
+				background-color: #fde3cc;
+
+				border: none;
+				border-radius: 50%;
+
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+
+				transition: all 0.2s linear;
+			}
+
+			&.slick-active {
+				button {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,382 @@
+.blog-one {
+	padding: 120px 0;
+
+	&__item {
+		margin-bottom: 0;
+
+		&-title {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__text {
+		padding-bottom: 15px;
+
+		h3 {
+			@extend %Rubik-500;
+			line-height: 30px;
+
+			margin-bottom: 10px;
+		}
+
+		p {
+			@extend %Rubik-400;
+			line-height: 30px;
+			margin-bottom: 45px;
+		}
+
+		blockquote {
+			border-left: 6px solid $accent-color;
+			background-color: #edf1f4;
+
+			padding: 20px 30px;
+			margin-bottom: 45px;
+
+			@extend %Rubik-400;
+			line-height: 30px;
+
+			.blockquote__author {
+				margin-top: 14px;
+				padding-left: 40px;
+
+				position: relative;
+
+				@extend %Rubik-400;
+				line-height: 30px;
+
+				&::before {
+					content: '';
+
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+
+					width: 20px;
+					height: 4px;
+
+					background-color: $accent-color;
+				}
+			}
+		}
+
+		&-img-left {
+			float: left;
+
+			width: 322px;
+			height: 210px;
+			object-fit: cover;
+
+			margin-right: 25px;
+		}
+
+		&-img-right {
+			float: right;
+
+			width: 322px;
+			height: 210px;
+			object-fit: cover;
+
+			margin-left: 25px;
+		}
+
+		&-accent {
+			color: #565872;
+		}
+
+		&-inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			margin-bottom: 40px;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__author {
+		border-top: 1px solid #ebebeb;
+		border-bottom: 1px solid #ebebeb;
+
+		padding: 24px 50px 24px 0;
+		margin-bottom: 60px;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-info {
+			display: flex;
+			align-items: center;
+
+			&__img {
+				width: 76px;
+				height: 76px;
+
+				object-fit: cover;
+
+				margin-right: 25px;
+			}
+
+			&__box-title {
+				color: #333;
+				@extend %Rubik-500;
+				font-size: 18px;
+
+				margin-bottom: 10px;
+			}
+
+			&__box-prof {
+				@extend %Rubik-400;
+
+				color: #666666;
+			}
+		}
+
+		&-content {
+			&__tags {
+				@extend %Rubik-400;
+				color: #333;
+
+				margin-bottom: 10px;
+
+				span {
+					margin-right: 25px;
+				}
+
+				a {
+					@extend %Rubik-400;
+					color: #999;
+				}
+			}
+
+			&__share {
+				@extend %Rubik-400;
+				color: #333;
+
+				span {
+					margin-right: 15px;
+				}
+
+				path {
+					fill: #a1a1a1;
+					transition: all 0.2s linear;
+				}
+
+				a:hover {
+					path {
+						fill: #333;
+					}
+				}
+			}
+		}
+	}
+
+	&__comments {
+		margin-bottom: 100px;
+
+		&-title {
+			@extend %Rubik-700;
+			font-size: 24px;
+			color: $header-color;
+
+			margin-bottom: 55px;
+		}
+
+		&-item {
+			display: flex;
+
+			&__img {
+				width: 100px;
+				height: 100px;
+
+				object-fit: cover;
+
+				margin-right: 30px;
+			}
+
+			&--reply {
+				margin: 30px 0 30px 130px;
+
+				padding-top: 30px;
+				padding-bottom: 30px;
+
+				border-top: 1px solid #e0e0e0;
+				border-bottom: 1px solid #e0e0e0;
+			}
+		}
+
+		&-content {
+			&__top {
+				display: flex;
+				justify-content: space-between;
+
+				margin-bottom: 25px;
+
+				&-title {
+					@extend %Rubik-700;
+					color: $header-color;
+				}
+
+				&-date {
+					@extend %Rubik-400;
+					font-size: 14px;
+					color: #9e9e9e;
+				}
+			}
+
+			&__text {
+				color: #565872;
+				@extend %Rubik-400;
+
+				margin-bottom: 25px;
+			}
+
+			&__reply {
+				@extend %Rubik-400;
+				color: #526278;
+				font-size: 14px;
+
+				padding-right: 18px;
+
+				position: relative;
+				&::after {
+					content: '';
+
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 0;
+
+					width: 14px;
+					height: 13px;
+
+					background: url(../img/blog/one/comments/arrow.svg) center no-repeat;
+				}
+			}
+		}
+	}
+
+	&__form {
+		&-title {
+			@extend %Rubik-700;
+			font-size: 24px;
+			color: $header-color;
+
+			margin-bottom: 45px;
+		}
+
+		&-input {
+			margin-bottom: 20px;
+
+			display: inline-block;
+
+			position: relative;
+
+			input {
+				width: 400px;
+				height: 50px;
+				padding: 15px 40px 15px 20px;
+
+				border: 1px solid #e5e5e5;
+				outline: 1px solid transparent;
+
+				transition: all 0.2s linear;
+
+				@extend %Rubik-400;
+				color: #333;
+
+				&::placeholder {
+					color: #999;
+					@extend %Rubik-400;
+				}
+
+				&:focus {
+					outline-color: $accent-color;
+				}
+			}
+
+			&::after {
+				content: '';
+
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 18px;
+				z-index: 3;
+
+				width: 13px;
+				height: 13px;
+			}
+
+			&--user::after {
+				background: url(../img/user-blue.svg) center no-repeat;
+			}
+
+			&--mail::after {
+				width: 18px;
+				background: url(../img/mail.svg) center no-repeat;
+			}
+		}
+
+		&-input + &-input {
+			margin-left: 25px;
+		}
+
+		&-textarea {
+			display: block;
+			margin-bottom: 40px;
+
+			position: relative;
+
+			&::after {
+				content: '';
+
+				position: absolute;
+				top: 18px;
+				right: 18px;
+
+				width: 18px;
+				height: 15px;
+
+				background: url(../img/message.svg) center no-repeat;
+			}
+
+			textarea {
+				padding: 15px 40px 15px 20px;
+
+				resize: none;
+
+				outline: 1px solid transparent;
+				transition: all 0.2s linear;
+
+				@extend %Rubik-400;
+
+				width: 100%;
+				height: 120px;
+
+				border: 1px solid #e5e5e5;
+
+				&::placeholder {
+					color: #999;
+					@extend %Rubik-400;
+				}
+
+				&:focus {
+					outline-color: $accent-color;
+
+					color: #333;
+				}
+			}
+		}
+
+		&-btn {
+			@extend %button;
+
+			padding: 17px 33px;
+		}
+	}
+}

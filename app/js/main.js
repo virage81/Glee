@@ -1,5 +1,25 @@
 $(function () {
 	/*
+============= Menu Button ==================
+	*/
+	$('.user-nav__link--menu').on('click', function() {
+		$('.menu').toggleClass('menu--active');
+	});
+
+	/*
+============= Product Tabs ==================
+	*/
+	$('.product-tabs__top-item').on('click', function (e) {
+		e.preventDefault();
+
+		$('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+		$(this).addClass('product-tabs__top-item--active');
+
+		$('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+		$($(this).attr('href')).addClass('product-tabs__content-item--active');
+	});
+
+	/*
 ============= Form Styler ==================
 	*/
 	$('.product-one__info-input').styler({});

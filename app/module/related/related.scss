@@ -1,0 +1,48 @@
+.related {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		text-align: left;
+		@extend %DMSans-700;
+		font-size: 36px;
+		color: $default-color;
+
+		margin-bottom: 0;
+	}
+
+	&__arrow {
+		border: 2px solid #edf1f4;
+		border-radius: 5px;
+
+		width: 50px;
+		height: 50px;
+
+		background-color: transparent;
+
+		cursor: pointer;
+
+		transition: all 0.2s linear;
+
+		& + .related__arrow {
+			margin-left: 15px;
+		}
+
+		path {
+			fill: $accent-color;
+		}
+
+		&:hover {
+			border-color: $accent-color;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+}
