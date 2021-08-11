@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/contact.min.css" />
+		<title>Contact</title>
+	</head>
+	<body>
+		{% include "app/module/header/header.html" %}
+
+		<main class="main">
+			<section class="breadcrumbs">
+				<div class="container">
+					<div class="breadcrumbs__title">Contact</div>
+
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="index.html" class="breadcrumbs__item-link"> Home </a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__item-link">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			{% include "app/module/contact/contact.html" %}
+			
+			{% include "app/module/blog/blog.html" %}
+		</main>
+
+		
+		{% include "app/module/footer/footer.html" %}
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+		<script>
+			let map;
+
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: { lat: 29.762057264136715, lng: -95.35599532668748 },
+					zoom: 10,
+				});
+			}
+		</script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

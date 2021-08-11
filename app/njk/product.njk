@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/product.min.css" />
+		<title>Product</title>
+	</head>
+	<body>
+		{% include "app/module/header/header.html" %}
+
+		<main class="main">
+			<section class="breadcrumbs">
+				<div class="container">
+					<div class="breadcrumbs__title">Product Detalis</div>
+
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="index.html" class="breadcrumbs__item-link"> Home </a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__item-link"> Product detalis </a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+
+
+
+			{% include "app/module/product-page/product-page.njk" %}
+			{% include "app/module/related/related.njk" %}
+			{% include "app/module/blog/blog.njk" %}
+		</main>
+
+		
+		{% include "app/module/footer/footer.html" %}
+
+		<script src="js/main.min.js"></script>
+	</body>
+</html>
