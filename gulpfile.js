@@ -20,7 +20,10 @@ function browsersync() {
 }
 
 function nunjucks() {
-	return src('app/njk/*.njk').pipe(nunjucksRender()).pipe(dest('app')).pipe(browserSync.stream());
+	return src('app/njk/*.njk')
+	.pipe(nunjucksRender())
+	.pipe(dest('app'))
+	.pipe(browserSync.stream());
 }
 
 function styles() {
@@ -85,8 +88,8 @@ function cleanDist() {
 }
 
 function watching() {
-	watch(['app/scss/**/*.scss'], styles);
-	watch(['app/**/*.njk', 'app/module/**/*.html'], nunjucks);
+	watch(['app/**/*.scss'], styles);
+	watch(['app/njk/*.njk', 'app/module/**/*.html'], nunjucks);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
 }

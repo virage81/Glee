@@ -1,5 +1,12 @@
 $(function () {
 	/*
+============= Menu Button ==================
+	*/
+	$('.user-nav__link--menu').on('click', function() {
+		$('.menu').toggleClass('menu--active');
+	});
+
+	/*
 ============= Product Tabs ==================
 	*/
 	$('.product-tabs__top-item').on('click', function (e) {
