@@ -91,3 +91,41 @@
 		}
 	}
 }
+
+@media (max-width: 1050px) {
+	.top-slider {
+		&__item {
+			padding: 170px 0 200px;
+			.top-slider__img {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.top-slider {
+		&__item {
+			padding: 130px 0 150px;
+		}
+		&__title {
+			font-size: 60px;
+			line-height: 62px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.top-slider {
+		&__item {
+			padding: 100px 0 120px;
+		}
+
+		&__title {
+			font-size: 45px;
+			line-height: 50px;
+			margin-bottom: 10px;
+		}
+	}
+}

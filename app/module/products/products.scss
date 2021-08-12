@@ -281,3 +281,35 @@
 		}
 	}
 }
+
+@media (max-width: 1200px) {
+	.products {
+		padding-bottom: 100px;
+
+		&__inner {
+			grid-template-columns: repeat(3, 1fr);
+			grid-row: auto;
+			justify-items: center;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.products {
+		padding-bottom: 50px;
+		&__inner {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.products {
+		
+
+		&__inner {
+			margin-top: 40px;
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
