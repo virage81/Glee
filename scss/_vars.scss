@@ -1,0 +1,66 @@
+$header-color: #436372;
+$footer-color: #7b7b7b;
+$accent-color: #a3bbc8;
+$default-color: #243f4d;
+$title-color: #191919;
+
+%DMSans-400 {
+	font-family: 'DMSans-Regular';
+	font-weight: 400;
+}
+
+%DMSans-500 {
+	font-family: 'DMSans-Medium';
+	font-weight: 500;
+}
+
+%DMSans-700 {
+	font-family: 'DMSans-Bold';
+	font-weight: 700;
+}
+
+%Rubik-700 {
+	font-family: 'Rubik-Bold';
+	font-weight: 700;
+}
+
+%Rubik-500 {
+	font-family: 'Rubik-Medium';
+	font-weight: 500;
+}
+
+%Rubik-400 {
+	font-family: 'Rubik-Regular';
+	font-weight: 400;
+}
+
+%Rubik-300 {
+	font-family: 'Rubik-Light';
+	font-weight: 300;
+}
+
+%Poppins-700 {
+	font-family: 'Poppins-Bold';
+	font-weight: 700;
+}
+
+%button {
+	color: #fff;
+	background-color: $accent-color;
+
+	font-size: 15px;
+	line-height: 12px;
+	@extend %Rubik-500;
+
+	border: none;
+
+	cursor: pointer;
+}
+
+%checkbox-hidden {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
+}

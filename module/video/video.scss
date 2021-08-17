@@ -1,0 +1,24 @@
+
+
+.video {
+	background: url(../img/video/video-bg.png) center no-repeat;
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 500px;
+}
+
+@media (max-width: 830px) {
+	.video  {
+		height: 200px;
+	}
+}
+
+@media (max-width: 550px) {
+	.video__link {
+		width: 80px;
+	}
+}
