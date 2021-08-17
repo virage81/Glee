@@ -1,8 +1,15 @@
 $(function () {
 	/*
+============= Filter Button ==================
+	*/
+	$('.shop-filters__btn').on('click', function () {
+		$('.shop-filters').toggleClass('shop-filters--active');
+	});
+
+	/*
 ============= Menu Button ==================
 	*/
-	$('.user-nav__link--menu').on('click', function() {
+	$('.user-nav__link--menu').on('click', function () {
 		$('.menu').toggleClass('menu--active');
 	});
 
@@ -42,7 +49,7 @@ $(function () {
 	});
 
 	/*
-============= Ion-rangeSlider ==================
+============= rateYo ==================
 	*/
 
 	$('.products__item-info__star').rateYo({
@@ -92,6 +99,16 @@ $(function () {
 		slidesToShow: 1,
 		arrows: false,
 		fade: true,
+
+		responsive: [
+			{
+				breakpoint: 1051,
+				settings: {
+					autoplay: true,
+					autoplaySpeed: 3000,
+				},
+			},
+		],
 	});
 
 	/*
