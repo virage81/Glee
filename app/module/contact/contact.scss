@@ -143,5 +143,46 @@
 			border-radius: 5px;
 		}
 	}
+}
 
+@media (max-width: 1050px) {
+	.contact {
+		&__links {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__item {
+			margin: 15px 30px;
+		}
+
+		&__form {
+			margin-right: 0;
+			width: 100%;
+
+			&-input {
+				width: 100%;
+				display: block;
+
+				input {
+					width: 100%;
+				}
+			}
+
+			&-input + &-input {
+				margin-left: 0;
+			}
+		}
+		#map {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.contact__item {
+		width: 100%;
+		height: auto;
+		padding-bottom: 10px;
+	}
 }

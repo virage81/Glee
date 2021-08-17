@@ -146,5 +146,15 @@
 			margin-top: 30px;
 		}
 	}
+}
 
+@media (max-width: 450px) {
+	.blog__article {
+		display: block;
+
+		&-link {
+			margin-top: 10px;
+			display: inline-block;
+		}
+	}
 }

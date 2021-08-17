@@ -26,6 +26,7 @@
 
 		&-link {
 			@extend %button;
+			display: inline-block;
 
 			border-radius: 5px;
 
@@ -123,6 +124,41 @@
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.about-team {
+		&__inner {
+			display: block;
+		}
+
+		&__info {
+			width: 100%;
+
+			margin-bottom: 30px;
+		}
+
+		&__content {
+			justify-items: center;
+		}
+	}
+}
+
+@media (max-width: 830px) {
+	.about-team {
+		&__content {
+			grid-template-columns: repeat(1, 1fr);
+
+			&-item {
+				width: fit-content;
+
+				&__info {
+					width: 100%;
+					right: 0;
 				}
 			}
 		}
