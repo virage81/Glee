@@ -380,3 +380,105 @@
 		}
 	}
 }
+
+@media (max-width: 900px) {
+	.blog-one {
+		&__form {
+			&-input {
+				display: block;
+				input {
+					width: 100%;
+				}
+			}
+
+			&-input + &-input {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.blog-one {
+		&__text {
+			&-inner {
+				display: block;
+			}
+
+			&-img {
+				&-left,
+				&-right {
+					width: 100%;
+					float: none;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.blog-one {
+		&__comments {
+			&-item {
+				&--reply {
+					margin-left: 70px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.blog-one {
+		&__author {
+			padding-right: 0;
+
+			flex-direction: column-reverse;
+
+			&-content {
+				margin-bottom: 10px;
+
+				display: flex;
+
+				&__tags {
+					margin-right: 20px;
+
+					span {
+						margin-right: 10px;
+					}
+				}
+
+				&__share {
+					span {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.blog-one {
+		&__author {
+			&-content {
+				display: block;
+
+				margin-bottom: 20px;
+			}
+		}
+
+		&__comments {
+			&-item {
+				&__img {
+					display: none;
+				}
+
+				&--reply {
+					margin-left: 30px;
+				}
+			}
+		}
+	}
+}

@@ -2,6 +2,7 @@
 	padding-top: 120px;
 
 	position: relative;
+
 	&::after {
 		position: absolute;
 		content: '';
@@ -127,6 +128,33 @@
 					color: #222933;
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+
+	.blog {
+		&__inner {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+
+		&__item + &__item {
+			margin-top: 30px;
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.blog__article {
+		display: block;
+
+		&-link {
+			margin-top: 10px;
+			display: inline-block;
 		}
 	}
 }

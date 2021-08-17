@@ -118,3 +118,48 @@
 		}
 	}
 }
+
+@media (max-width: 1200px) {
+	.about {
+		padding: 60px 0;
+		&__inner {
+			justify-content: center;
+		}
+		&__img {
+			display: none;
+		}
+
+		&-team {
+			&__inner {
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.about {
+		&__content {
+			&-text {
+				margin-bottom: 15px;
+			}
+
+			&-box {
+				padding-top: 0;
+			}
+
+			&-box__list {
+				flex-wrap: wrap;
+				justify-content: center;
+
+				&-item {
+					margin: 10px 30px;
+				}
+
+				&-item + &-item {
+					border-left: none;
+				}
+			}
+		}
+	}
+}
