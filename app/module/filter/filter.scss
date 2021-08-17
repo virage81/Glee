@@ -317,3 +317,20 @@
 		}
 	}
 }
+
+@media (max-width: 1050px) {
+	.filter-category,
+	.filter-posts {
+		display: none;
+	}
+
+	.filter-search {
+		width: 100%;
+	}
+
+	.filter {
+		max-width: 100%;
+
+		margin-bottom: 40px;
+	}
+}

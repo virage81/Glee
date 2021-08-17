@@ -181,6 +181,14 @@ body {
 	}
 }
 
+@media (max-width: 1050px) {
+	.pagination {
+		&__list {
+			justify-content: center;
+		}
+	}
+}
+
 @media (max-width: 630px) {
 	.title {
 		font-size: 28px;
