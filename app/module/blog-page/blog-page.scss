@@ -57,7 +57,7 @@
 					position: relative;
 
 					&::before {
-						content: '';
+						content: "";
 
 						position: absolute;
 						top: 50%;
@@ -83,7 +83,7 @@
 					position: relative;
 
 					&::before {
-						content: '';
+						content: "";
 
 						position: absolute;
 						top: 50%;
@@ -128,6 +128,20 @@
 				outline: 1px solid transparent;
 
 				transition: all 0.2s linear;
+
+				svg path {
+					fill: #a3bbc8;
+					transition: all 0.2s linear;
+				}
+
+				&:hover {
+					background: $accent-color;
+					color: #fff;
+
+					svg path {
+						fill: #fff;
+					}
+				}
 
 				&:focus {
 					outline-color: darken($accent-color, 10%);

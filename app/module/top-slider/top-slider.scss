@@ -29,6 +29,15 @@
 		color: $header-color;
 
 		margin-bottom: 45px;
+
+		a {
+			color: darken($header-color, 20%);
+			display: inline-block;
+			transition: all 0.2s linear;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
 	}
 
 	&__btn {

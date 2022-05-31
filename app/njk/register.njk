@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/login-register.min.css" />
-		<title>Log in</title>
+		<title>Register</title>
 	</head>
 	<body>
 		{% include "app/module/header/header.html" %}
@@ -13,21 +13,21 @@
 		<main class="main">
 			<section class="breadcrumbs">
 				<div class="container">
-					<div class="breadcrumbs__title">Log in</div>
+					<div class="breadcrumbs__title">Register</div>
 
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="index.html" class="breadcrumbs__item-link"> Home </a>
 						</li>
 						<li class="breadcrumbs__item">
-							<a href="login.html" class="breadcrumbs__item-link"> Log in </a>
+							<a href="register.html" class="breadcrumbs__item-link"> Register </a>
 						</li>
 					</ul>
 				</div>
 			</section>
 
 
-			{% include "app/module/modal/modal.html" %}
+			{% include "app/module/modal/modal--register.html" %}
 			{% include "app/module/partners/partners.html" %}
 		</main>
 
