@@ -10,3 +10,6 @@ dist/
 node_modules/
 package-lock.json
 app/css/*
+
+app/Product-list1.html
+app/Product-list2.html
