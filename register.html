@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/login-register.min.css" />
-		<title>Log in</title>
+		<title>Register</title>
 	</head>
 	<body>
 		<header class="header">
@@ -68,14 +68,14 @@
 		<main class="main">
 			<section class="breadcrumbs">
 				<div class="container">
-					<div class="breadcrumbs__title">Log in</div>
+					<div class="breadcrumbs__title">Register</div>
 
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="index.html" class="breadcrumbs__item-link"> Home </a>
 						</li>
 						<li class="breadcrumbs__item">
-							<a href="login.html" class="breadcrumbs__item-link"> Log in </a>
+							<a href="register.html" class="breadcrumbs__item-link"> Register </a>
 						</li>
 					</ul>
 				</div>
@@ -85,25 +85,22 @@
 				<div class="container">
 					<form class="modal__form">
 						<label class="modal__form-label">
-							Username or email address *
+							Username *
 							<input class="modal__form-input" type="text" required />
+						</label>
+						<label class="modal__form-label">
+							Email *
+							<input class="modal__form-input" type="email" required />
+						</label>
+						<label class="modal__form-label">
+							Name and Surname
+							<input class="modal__form-input" type="text" />
 						</label>
 						<label class="modal__form-label">
 							Password *
 							<input class="modal__form-input" type="password" required />
 						</label>
-						<button class="modal__form-btn" type="submit">Login</button>
-						<div class="modal__form-extension">
-							<label class="modal__form-label modal__form-label--checkbox">
-								<input class="modal__form-input modal__form-input--checkbox" type="checkbox" />
-								Remember me
-							</label>
-							<a class="modal__form-link" href="#">Lost your password?</a>
-						</div>
-						<div class="modal__register">
-							<p class="modal__register-text">Not registered? No problem</p>
-							<a class="modal__register-link" href="register.html">Create an account</a>
-						</div>
+						<button class="modal__form-btn" type="submit">Register</button>
 					</form>
 				</div>
 			</section>
