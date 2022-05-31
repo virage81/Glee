@@ -141,6 +141,8 @@
 					border-radius: 0;
 					box-shadow: none;
 
+					transition: all 0.2s linear;
+
 					input {
 						text-align: center;
 
@@ -178,7 +180,7 @@
 					cursor: pointer;
 
 					&::after {
-						content: '';
+						content: "";
 
 						position: absolute;
 						top: 48%;
@@ -204,7 +206,7 @@
 					cursor: pointer;
 
 					&::after {
-						content: '';
+						content: "";
 
 						position: absolute;
 						top: 49%;
@@ -217,7 +219,7 @@
 					}
 
 					&::before {
-						content: '';
+						content: "";
 
 						position: absolute;
 						top: 23px;
@@ -311,6 +313,17 @@
 				&__text {
 					line-height: 30px;
 				}
+
+				&__list-link {
+					color: darken($default-color, 10%);
+					display: inline-block;
+
+					transition: all 0.2s linear;
+
+					&:hover {
+						transform: scale(1.05);
+					}
+				}
 			}
 		}
 	}
@@ -332,7 +345,6 @@
 		}
 	}
 }
-
 
 @media (max-width: 830px) {
 	.product-page {

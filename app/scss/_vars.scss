@@ -5,56 +5,67 @@ $default-color: #243f4d;
 $title-color: #191919;
 
 %DMSans-400 {
-	font-family: 'DMSans-Regular';
+	font-family: "DMSans-Regular";
 	font-weight: 400;
 }
 
 %DMSans-500 {
-	font-family: 'DMSans-Medium';
+	font-family: "DMSans-Medium";
 	font-weight: 500;
 }
 
 %DMSans-700 {
-	font-family: 'DMSans-Bold';
+	font-family: "DMSans-Bold";
 	font-weight: 700;
 }
 
 %Rubik-700 {
-	font-family: 'Rubik-Bold';
+	font-family: "Rubik-Bold";
 	font-weight: 700;
 }
 
 %Rubik-500 {
-	font-family: 'Rubik-Medium';
+	font-family: "Rubik-Medium";
 	font-weight: 500;
 }
 
 %Rubik-400 {
-	font-family: 'Rubik-Regular';
+	font-family: "Rubik-Regular";
 	font-weight: 400;
 }
 
 %Rubik-300 {
-	font-family: 'Rubik-Light';
+	font-family: "Rubik-Light";
 	font-weight: 300;
 }
 
 %Poppins-700 {
-	font-family: 'Poppins-Bold';
+	font-family: "Poppins-Bold";
 	font-weight: 700;
 }
 
 %button {
 	color: #fff;
 	background-color: $accent-color;
+	outline: 1px solid transparent;
+	border: 1px solid transparent;
 
 	font-size: 15px;
 	line-height: 12px;
 	@extend %Rubik-500;
 
-	border: none;
-
 	cursor: pointer;
+
+	transition: all 0.2s linear;
+
+	&:hover {
+		border-color: $accent-color;
+		background: #fff;
+		color: $accent-color;
+	}
+	&:focus {
+		outline-color: $accent-color;
+	}
 }
 
 %checkbox-hidden {

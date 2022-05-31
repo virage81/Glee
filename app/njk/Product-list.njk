@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/product-list2.min.css" />
-		<title>Product list 2</title>
+		<link rel="stylesheet" href="css/product-list.min.css" />
+		<title>Product list</title>
 	</head>
 	<body>
 		{% include "app/module/header/header.html" %}
@@ -13,20 +13,18 @@
 		<main class="main">
 			<section class="breadcrumbs">
 				<div class="container">
-					<div class="breadcrumbs__title">Product list 2</div>
+					<div class="breadcrumbs__title">Product list</div>
 
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="index.html" class="breadcrumbs__item-link"> Home </a>
 						</li>
 						<li class="breadcrumbs__item">
-							<a href="#" class="breadcrumbs__item-link"> Product list 2 </a>
+							<a href="product-list.html" class="breadcrumbs__item-link"> Product list </a>
 						</li>
 					</ul>
 				</div>
 			</section>
-
-<button class="shop-filters__btn"></button>
 			
 			{% include "app/module/shop/shop.html" %}
 			{% include "app/module/partners/partners.html" %}
