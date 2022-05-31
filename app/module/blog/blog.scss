@@ -5,7 +5,7 @@
 
 	&::after {
 		position: absolute;
-		content: '';
+		content: "";
 		bottom: 0;
 		top: 50%;
 		left: 0;
@@ -41,7 +41,7 @@
 
 			&::after {
 				position: absolute;
-				content: '';
+				content: "";
 				top: 0;
 				right: 0;
 				bottom: 0;
@@ -115,6 +115,10 @@
 
 				display: flex;
 
+				i {
+					padding-right: 3px;
+				}
+
 				&__date {
 					margin-right: 25px;
 				}
@@ -133,7 +137,6 @@
 }
 
 @media (max-width: 1200px) {
-
 	.blog {
 		&__inner {
 			flex-direction: column;
